@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="system">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Fullstack Developer</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS Library for scroll animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Aura Background Elements -->
+    <div class="aura-bg">
+        <div class="glow glow-1"></div>
+        <div class="glow glow-2"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <!-- <a href="#" class="logo" id="nav-name">LOADING</a> -->
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#experience">Work Exp</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#expertise">Expertise</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <div class="theme-switcher">
+                <button id="theme-toggle" aria-label="Switch Theme">
+                    <i class="fas fa-desktop" id="theme-icon"></i>
+                </button>
+                <div class="theme-menu" id="theme-menu">
+                    <button data-theme="light"><i class="fa fa-sun"></i> Light</button>
+                    <button data-theme="dark"><i class="fas fa-moon"></i> Dark</button>
+                    <button data-theme="system"><i class="fas fa-desktop"></i> System</button>
+                </div>
+            </div>
+
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Combined Intro/About Section -->
+        <section id="about" class="section intro-section">
+            <div class="container">
+                <div class="intro-grid">
+                    <div class="intro-content" data-aos="fade-right">
+                        <span class="badge">WELCOME TO MY PORTFOLIO</span>
+                        <h1 id="hero-name">LOADING</h1>
+                        <h2 id="hero-title" class="text-gradient">LOADING</h2>
+                        <p id="about-description" style="text-align: justify;">LOADING</p>
+                        <div class="hero-stats" id="hero-stats">
+                            <!-- Dynamic Stats -->
+                        </div>
+                        <div class="hero-actions"
+                            style="display: flex; gap: 1rem; margin-top: 2rem; margin-bottom: 2rem; flex-wrap: wrap;">
+                            <a href="resume.pdf" target="_blank" class="btn btn-glass"><i class="fas fa-download"
+                                    style="margin-right: 8px;"></i> Download Resume</a>
+                            <a href="mailto:yeemonlay02@gmail.com" class="btn btn-primary"><i class="fas fa-paper-plane"
+                                    style="margin-right: 8px;"></i> Let's Connect</a>
+                            <div class="social-links" id="social-links">
+                                <!-- Dynamic Socials -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="intro-image" data-aos="fade-left" style="margin-left: 5rem;">
+                        <img src="img/TechLogos.png" alt="Tech Logos" class="hero-image">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">FOUNDATION</span>
+                    <h2 class="section-title">Education <span class="highlight">History</span></h2>
+                </div>
+                <div class="timeline" id="education-timeline">
+                    <!-- Dynamic Education -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Work Exp Section -->
+        <section id="experience" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">JOURNEY</span>
+                    <h2 class="section-title">Work <span class="highlight">Experience</span></h2>
+                </div>
+                <div class="timeline" id="experience-timeline">
+                    <!-- Dynamic Experience -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section">
+            <div class="container overflow-hidden">
+                <div class="section-header">
+                    <span class="section-subtitle">ARBITRAGE</span>
+                    <h2 class="section-title">Technical <span class="highlight">Skills</span></h2>
+                </div>
+                <div class="marquee-container" id="skills-container" data-aos="fade-up">
+                    <!-- Dynamic Marquee Content -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Expertise Section -->
+        <section id="expertise" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">MASTERY</span>
+                    <h2 class="section-title">Core <span class="highlight">Expertise</span></h2>
+                </div>
+                <div class="expertise-grid" id="expertise-container">
+                    <!-- Dynamic Expertise -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="container">
+                <div class="contact-card" data-aos="zoom-in">
+                    <span class="section-subtitle">CONNECT</span>
+                    <h2 class="section-title">Let's <span class="highlight">Collaborate</span></h2>
+                    <p id="contact-text">Loading...</p>
+                    <div class="social-links" id="social-links">
+                        <!-- Dynamic Socials -->
+                    </div>
+                    <a href="#" id="contact-email-btn" class="btn btn-primary mt-2">Get In Touch</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container" style="margin-bottom: 20px;">
+            <p>&copy; <span id="footer-year"></span> All Right Reserved By <span id="footer-name"></span></p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>
