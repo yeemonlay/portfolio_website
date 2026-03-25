@@ -97,11 +97,18 @@ $(document).ready(function () {
             if (experienceTimeline.length && data.workExp) {
                 experienceTimeline.empty();
                 data.workExp.forEach((exp, index) => {
+                    // Handle description as array (bullet list) or string (paragraph)
+                    let descriptionHtml;
+                    if (Array.isArray(exp.description)) {
+                        descriptionHtml = '<ul>' + exp.description.map(item => `<li>${item}</li>`).join('') + '</ul>';
+                    } else {
+                        descriptionHtml = `<p>${exp.description}</p>`;
+                    }
                     experienceTimeline.append(`
                         <div class="timeline-item" data-aos="fade-up">
                             <h3>${exp.role}</h3>
                             <span>${exp.company} | ${exp.duration}</span>
-                            <p>${exp.description}</p>
+                            ${descriptionHtml}
                         </div>
                     `);
                 });
@@ -120,12 +127,20 @@ $(document).ready(function () {
                     }
                 });
 
-                // Generate HTML for skills
-                const skillTagsHtml = allSkills.map(item => `<span class="skill-tag">${item}</span>`).join('');
+                // Generate HTML for skills with icons from data.js
+                const skillTagsHtml = allSkills.map(item => {
+                    const icon = item.icon || 'fas fa-code';
+                    const name = item.name || item;
+                    return `<span class="skill-tag"><i class="${icon}" style="margin-right: 8px;"></i>${name}</span>`;
+                }).join('');
 
                 // Reversed skills for the second row
                 const reversedSkills = [...allSkills].reverse();
-                const reversedSkillTagsHtml = reversedSkills.map(item => `<span class="skill-tag">${item}</span>`).join('');
+                const reversedSkillTagsHtml = reversedSkills.map(item => {
+                    const icon = item.icon || 'fas fa-code';
+                    const name = item.name || item;
+                    return `<span class="skill-tag"><i class="${icon}" style="margin-right: 8px;"></i>${name}</span>`;
+                }).join('');
 
                 // Create the scrolling track. We duplicate the content to create a seamless loop.
                 const marqueeHtml = `
