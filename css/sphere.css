@@ -1,0 +1,39 @@
+
+.tech-sphere-container {
+    margin-top:100px;
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    cursor: grab;
+}
+
+.tech-sphere-container:active {
+    cursor: grabbing;
+}
+
+.sphere-item {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    will-change: transform;
+    transition: transform 0.15s ease;
+}
+
+.sphere-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.sphere-icon img {
+    width: 34px;
+    height: 34px;
+    object-fit: contain;
+}

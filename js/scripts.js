@@ -182,7 +182,11 @@ $(document).ready(function () {
                 const socialContainer = $('#social-links');
                 socialContainer.empty();
                 data.personalInfo.social.forEach(social => {
-                    socialContainer.append(`<a href="${social.url}" target="_blank" aria-label="${social.platform}"><i class="${social.icon}"></i></a>`);
+                    if (social.icon.endsWith('.png')) {
+                        socialContainer.append(`<a href="${social.url}" target="_blank" aria-label="${social.platform}"><img src="img/${social.icon}" alt="${social.platform}" style="width: 20px; height: 20px; border-radius: 50%;"></a>`);
+                    } else {
+                        socialContainer.append(`<a href="${social.url}" target="_blank" aria-label="${social.platform}"><i class="${social.icon}"></i></a>`);
+                    }
                 });
                 $('#footer-name').text(data.personalInfo.name);
             }

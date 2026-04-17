@@ -2,18 +2,18 @@ const portfolioData = {
     personalInfo: {
         name: "YEE MON ZAW",
         title: "Fullstack Developer",
-        tagline: "Building Digital Experiences",
-        bio: "Software Engineer with strong experience in the Microsoft ecosystem, specializing in the design and development of scalable, high-performance web applications. Expert in leveraging .NET technologies and cloud-native architectures to deliver secure, enterprise-grade solutions. Proven track record in leading complex technical migrations, optimizing system performance, and contributing to innovative projects through a proactive, problem-solving approach.",
+        bio: " Software Engineer with strong experience in designing and building scalable web applications and APIs. Strong expertise in ASP.NET Core, cloud-based solutions on Azure, and modern DevOps practices. Experienced in backend development, API integration, and handling data across relational and NoSQL databases. Passionate about integrating AI-driven solutions to enhance business processes. ",
         email: "yeemonlay02@gmail.com",
         location: "Singapore",
         social: [
             { platform: "GitHub", url: "https://github.com", icon: "fab fa-github" },
             { platform: "LinkedIn", url: "https://linkedin.com", icon: "fab fa-linkedin" },
+            { platform: "Credly", url: "https://www.credly.com/users/yee-mon-zaw", imageUrl: "img/credly.png" }
         ],
         stats: [
             { label: "Years Experience", value: "10+" },
             { label: "Enterprise Projects", value: "20+" },
-            { label: "Tech Mastered", value: "10+" }
+            { label: "Tech Mastered", value: "30+" }
         ]
     },
     about: {
@@ -41,7 +41,7 @@ const portfolioData = {
     workExp: [
         {
             company: "YTL PowerSeraya, Singapore",
-            role: "Senior Software Developer",
+            role: "Senior Software Development Engineer",
             duration: "May 2022 - Present",
             description: [
                 "Led end-to-end development of enterprise energy trading and gas management systems to automate core utility operations.",
