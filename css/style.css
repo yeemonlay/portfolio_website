@@ -584,6 +584,7 @@ h3,
     display: flex;
     gap: 1rem;
     margin-bottom: 2rem;
+    padding-top: 20px;
 }
 
 .social-links a {

@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    // 1. Theme Logic
+    // Theme Logic
     const themeToggle = $('#theme-toggle');
     const themeMenu = $('#theme-menu');
     const themeIcon = $('#theme-icon');
@@ -46,7 +46,7 @@ $(document).ready(function () {
         }
     });
 
-    // 2. Dynamic Population
+    // Dynamic Population
     function populatePortfolio() {
         try {
             const data = portfolioData;
@@ -181,77 +181,94 @@ $(document).ready(function () {
             if (data.personalInfo && data.personalInfo.social) {
                 const socialContainer = $('#social-links');
                 socialContainer.empty();
+
                 data.personalInfo.social.forEach(social => {
-                    if (social.icon.endsWith('.png')) {
-                        socialContainer.append(`<a href="${social.url}" target="_blank" aria-label="${social.platform}"><img src="img/${social.icon}" alt="${social.platform}" style="width: 20px; height: 20px; border-radius: 50%;"></a>`);
+
+                    if (social.imageUrl) {
+                        // For Credly (image)
+                        socialContainer.append(`<a href="${social.url}" target="_blank" aria-label="${social.platform}">
+                    <img src="${social.imageUrl}" alt="${social.platform}" style="width:20px; height:20px; object-fit:contain; border-radius:50%;"></a>`);
                     } else {
+                        // For Font Awesome icons
                         socialContainer.append(`<a href="${social.url}" target="_blank" aria-label="${social.platform}"><i class="${social.icon}"></i></a>`);
                     }
-                });
-                $('#footer-name').text(data.personalInfo.name);
-            }
 
-            $('#footer-year').text(new Date().getFullYear());
-        } catch (e) {
-            console.error("Error populating portfolio:", e);
+                });
+            }
+                // if (data.personalInfo && data.personalInfo.social) {
+                //     const socialContainer = $('#social-links');
+                //     socialContainer.empty();
+                //     data.personalInfo.social.forEach(social => {
+                //         if (social.icon.endsWith('.png')) {
+                //             socialContainer.append(`<a href="${social.url}" target="_blank" aria-label="${social.platform}"><img src="img/${social.icon}" alt="${social.platform}" style="width: 20px; height: 20px; border-radius: 50%;"></a>`);
+                //         } else {
+                //             socialContainer.append(`<a href="${social.url}" target="_blank" aria-label="${social.platform}"><i class="${social.icon}"></i></a>`);
+                //         }
+                //     });
+                //     $('#footer-name').text(data.personalInfo.name);
+                // }
+
+                $('#footer-year').text(new Date().getFullYear());
+            } catch (e) {
+                console.error("Error populating portfolio:", e);
+            }
         }
-    }
 
     populatePortfolio();
 
-    // 3. Navigation & Smooth Scroll
-    $(window).on('scroll', function () {
-        const scrollPos = $(window).scrollTop();
+        // Navigation & Smooth Scroll
+        $(window).on('scroll', function () {
+            const scrollPos = $(window).scrollTop();
 
-        // Navbar styling on scroll
-        if (scrollPos > 50) {
-            $('.navbar').css('background', 'var(--nav-bg)');
-            $('.navbar').css('box-shadow', '0 10px 30px rgba(0,0,0,0.5)');
-        } else {
-            $('.navbar').css('background', 'transparent');
-            $('.navbar').css('box-shadow', 'none');
-        }
+            // Navbar styling on scroll
+            if (scrollPos > 50) {
+                $('.navbar').css('background', 'var(--nav-bg)');
+                $('.navbar').css('box-shadow', '0 10px 30px rgba(0,0,0,0.5)');
+            } else {
+                $('.navbar').css('background', 'transparent');
+                $('.navbar').css('box-shadow', 'none');
+            }
 
-        // Active link tracking
-        $('.section').each(function () {
-            const top = $(this).offset().top - 100;
-            const bottom = top + $(this).outerHeight();
-            const id = $(this).attr('id');
+            // Active link tracking
+            $('.section').each(function () {
+                const top = $(this).offset().top - 100;
+                const bottom = top + $(this).outerHeight();
+                const id = $(this).attr('id');
 
-            if (scrollPos >= top && scrollPos <= bottom) {
-                $('.nav-links a').removeClass('active');
-                $(`.nav-links a[href="#${id}"]`).addClass('active');
+                if (scrollPos >= top && scrollPos <= bottom) {
+                    $('.nav-links a').removeClass('active');
+                    $(`.nav-links a[href="#${id}"]`).addClass('active');
+                }
+            });
+        });
+
+        // Mobile Menu logic with Aura enhancements
+        const burger = $('.burger');
+        const nav = $('.nav-links');
+
+        burger.on('click', function () {
+            nav.toggleClass('nav-active');
+            burger.toggleClass('toggle');
+
+            if (nav.hasClass('nav-active')) {
+                nav.fadeIn(300).css('display', 'flex');
+            } else {
+                nav.fadeOut(300);
             }
         });
+
+        $('.nav-links a').on('click', function () {
+            if ($(window).width() <= 768) {
+                nav.removeClass('nav-active').fadeOut(300);
+                burger.removeClass('toggle');
+            }
+        });
+
+        // 4. Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            mirror: false
+        });
     });
-
-    // Mobile Menu logic with Aura enhancements
-    const burger = $('.burger');
-    const nav = $('.nav-links');
-
-    burger.on('click', function () {
-        nav.toggleClass('nav-active');
-        burger.toggleClass('toggle');
-
-        if (nav.hasClass('nav-active')) {
-            nav.fadeIn(300).css('display', 'flex');
-        } else {
-            nav.fadeOut(300);
-        }
-    });
-
-    $('.nav-links a').on('click', function () {
-        if ($(window).width() <= 768) {
-            nav.removeClass('nav-active').fadeOut(300);
-            burger.removeClass('toggle');
-        }
-    });
-
-    // 4. Initialize AOS
-    AOS.init({
-        duration: 800,
-        easing: 'ease-in-out',
-        once: true,
-        mirror: false
-    });
-});

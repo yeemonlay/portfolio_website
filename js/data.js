@@ -2,7 +2,7 @@ const portfolioData = {
     personalInfo: {
         name: "YEE MON ZAW",
         title: "Fullstack Developer",
-        bio: " Software Engineer with strong experience in designing and building scalable web applications and APIs. Strong expertise in ASP.NET Core, cloud-based solutions on Azure, and modern DevOps practices. Experienced in backend development, API integration, and handling data across relational and NoSQL databases. Passionate about integrating AI-driven solutions to enhance business processes. ",
+        bio: "Software Engineer with strong experience in designing and building scalable web applications and APIs. Expertise in ASP.NET Core, Azure Cloud, and modern DevOps practices. Proven track record in backend development, API integration, and handling complex data across relational and NoSQL databases. Passionate about integrating AI-driven solutions to enhance industrial business processes.",
         email: "yeemonlay02@gmail.com",
         location: "Singapore",
         social: [
@@ -18,7 +18,7 @@ const portfolioData = {
     },
     about: {
         title: "Fullstack Developer",
-        description: "Software Engineer with strong experience in the Microsoft ecosystem, specializing in the design and development of scalable, high-performance web applications. Expert in leveraging .NET technologies and cloud-native architectures to deliver secure, enterprise-grade solutions. Proven track record in leading complex technical migrations, optimizing system performance, and contributing to innovative projects through a proactive, problem-solving approach.",
+        description: "Software Engineer with strong experience in designing and building scalable web applications and APIs. Expertise in ASP.NET Core, Azure Cloud, and modern DevOps practices. Proven track record in backend development, API integration, and handling complex data across relational and NoSQL databases. Passionate about integrating AI-driven solutions to enhance industrial business processes.",
         details: [
             { icon: "fas fa-envelope", label: "Email", value: "yeemonlay02@gmail.com" },
             { icon: "fas fa-location-dot", label: "Location", value: "Singapore" }
@@ -45,6 +45,7 @@ const portfolioData = {
             duration: "May 2022 - Present",
             description: [
                 "Led end-to-end development of enterprise energy trading and gas management systems to automate core utility operations.",
+                "Architected a secure data bridge using OPC Foundation .NET Standard to stream real-time telemetry from PLC controllers to Azure Cosmos DB.",
                 "Orchestrated the migration of legacy .NET applications to Azure Cloud, including framework upgrades and infrastructure modernization.",
                 "Engineered CI/CD pipelines to automate Azure deployments, improving release velocity and reducing manual errors.",
                 "Executed secure B2B and SFTP integrations with external partners for seamless cross-company data exchange.",
@@ -59,10 +60,9 @@ const portfolioData = {
             description: [
                 "Led development of web applications and backend APIs, translating complex workflows into scalable digital solutions.",
                 "Designed and deployed admin portals, messenger chatbots, and real-time KPI dashboards for data-driven decision-making.",
-                "Engineered secure API integrations with major Myanmar banks, mobile wallets, and IoT hardware (mobile printers).",
-                "Implemented localization strategies to ensure product accessibility across diverse regional markets.",
+                "Engineered secure API integrations with major Myanmar banks, mobile wallets, and IoT hardware.",
                 "Managed and upskilled junior developers and interns, fostering a culture of technical excellence and knowledge sharing.",
-                "Provided training and facilitated knowledge transfer sessions to end-users."
+                "Implemented localization strategies to ensure product accessibility across diverse regional markets.",
             ]
         },
         {
@@ -76,82 +76,102 @@ const portfolioData = {
             ]
         }
     ],
-    skills: [
-        {
-            category: "Frontend",
-            items: [
-                { name: "React", icon: "fab fa-react" },
-                { name: "HTML", icon: "fab fa-html5" },
-                { name: "CSS", icon: "fab fa-css3-alt" },
-                { name: "JavaScript", icon: "fab fa-js" },
-                { name: "jQuery", icon: "fab fa-js" },
-                { name: "Bootstrap", icon: "fab fa-bootstrap" },
-                { name: "Ajax", icon: "fas fa-sync" }
-            ]
-        },
-        {
-            category: "Backend",
-            items: [
-                { name: "ASP.NET", icon: "fab fa-microsoft" },
-                { name: "ASP.NET Core", icon: "fab fa-microsoft" },
-                { name: "C#", icon: "fas fa-code" },
-                { name: "Entity Framework Core", icon: "fas fa-database" },
-                { name: "Dapper", icon: "fas fa-database" },
-                { name: "LINQ", icon: "fas fa-code" },
-                { name: "MSSQL Server", icon: "fas fa-database" },
-                { name: "Neo4j", icon: "fas fa-project-diagram" },
-                { name: "Cosmos DB", icon: "fas fa-leaf" },
-                { name: "REST API", icon: "fas fa-exchange-alt" },
-                { name: "SOAP API", icon: "fas fa-exchange-alt" },
-                { name: "GraphQL", icon: "fab fa-graphql" }
-            ]
-        }
-    ],
+skills: [
+    {
+        category: "Frontend",
+        items: [
+            { name: "React", icon: "fab fa-react" },
+            { name: "HTML5", icon: "fab fa-html5" },
+            { name: "CSS3", icon: "fab fa-css3-alt" },
+            { name: "Tailwind CSS", icon: "fab fa-css3-alt" },
+            { name: "JavaScript", icon: "fab fa-js" },
+            { name: "TypeScript", icon: "fas fa-code" },
+            { name: "jQuery", icon: "fas fa-code" },
+            { name: "Bootstrap", icon: "fab fa-bootstrap" },
+            { name: "Ajax", icon: "fas fa-sync-alt" }
+        ]
+    },
+    {
+        category: "Backend",
+        items: [
+            { name: "C#", icon: "fas fa-code" },
+            { name: "ASP.NET Core", icon: "fab fa-microsoft" },
+            { name: "Entity Framework Core", icon: "fab fa-microsoft" },
+            { name: "Dapper", icon: "fas fa-code" },
+            { name: "LINQ", icon: "fas fa-code" },
+
+            { name: "MSSQL Server", icon: "fas fa-database" },
+            { name: "PostgreSQL", icon: "fas fa-database" },
+            { name: "Azure Cosmos DB", icon: "fas fa-database" },
+            { name: "Redis", icon: "fas fa-database" },
+            { name: "Supabase", icon: "fas fa-database" },
+            { name: "SQLite", icon: "fas fa-database" },
+
+            { name: "RESTful APIs", icon: "fas fa-cogs" },
+            { name: "SOAP APIs", icon: "fas fa-cogs" },
+            { name: "GraphQL", icon: "fas fa-cogs" },
+            { name: "OPC UA", icon: "fas fa-industry" },
+
+            { name: "Microsoft Azure", icon: "fab fa-microsoft" },
+            { name: "Docker", icon: "fab fa-docker" },
+            { name: "CI/CD", icon: "fas fa-infinity" },
+
+            { name: "Git", icon: "fab fa-git-alt" },
+            { name: "GitHub", icon: "fab fa-github" },
+            { name: "Bitbucket", icon: "fab fa-bitbucket" },
+            { name: "Azure DevOps", icon: "fab fa-microsoft" },
+
+            { name: "DevExpress", icon: "fas fa-file-alt" },
+            { name: "Crystal Reports", icon: "fas fa-file-alt" },
+            { name: "PowerShell", icon: "fas fa-terminal" }
+        ]
+    }
+],
     expertise: [
         {
             title: "Software Architecture & Design Patterns",
-            description: "Designing scalable and maintainable system architectures using modern patterns.",
-            icon: "fas fa-sitemap"
+            description: "",
+            icon: "fas fa-cogs"
         },
         {
             title: "Backend API Development",
-            description: "Designing and implementing robust backend APIs to support frontend applications.",
-            icon: "fas fa-paint-brush"
+            description: "",
+            icon: "fas fa-code"
         },
         {
             title: "Web Application Development",
-            description: "Deploying and managing applications on AWS and Docker for high availability.",
-            icon: "fas fa-cloud"
+            description: "",
+            icon: "fas fa-laptop-code"
         },
         {
             title: "Database Design & Management",
-            description: "Designing and implementing efficient database solutions for scalable applications.",
+            description: "",
             icon: "fas fa-database"
         },
         {
             title: "Cloud Platforms & Services",
-            description: "Deploying and managing applications on AWS and Docker for high availability.",
+            description: "",
             icon: "fas fa-cloud"
         },
         {
             title: "DevOps & CI/CD Pipelines",
-            description: "Deploying and managing applications on AWS and Docker for high availability.",
-            icon: "fas fa-cloud"
+            description: "",
+            icon: "fas fa-infinity"
         },
         {
             title: "Version Control & Collaboration ",
-            description: "Deploying and managing applications on AWS and Docker for high availability.",
-            icon: "fas fa-cloud"
+            description: "",
+            icon: "fab fa-git-alt"
         },
         {
             title: "Agile & SDLC Methodologies",
-            description: "Deploying and managing applications on AWS and Docker for high availability.",
-            icon: "fas fa-cloud"
+            description: "",
+            icon: "fas fa-tasks"
         }
     ],
     contact: {
         text: "Have a project in mind or just want to chat? I'm always open to discussing new projects, creative ideas or opportunities to be part of your visions.",
-        email: "khantko@example.com"
+        email: "yeemonlay02@gmail.com"
     }
 };
 

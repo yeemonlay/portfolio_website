@@ -22,7 +22,9 @@ const ICONS = [
     //other
     { name: 'Azure', color: '#0078D4', imageUrl: 'img/azure.png' },
     { name: 'Azure DevOps', color: '#0078D4', imageUrl: 'img/ado.png' },
+    { name: 'Git', color: '#F05032', slug: 'git' },
     { name: 'GitHub', color: '#181717', slug: 'github' },
+    { name: 'Bitbucket', color: '#3c0cec', slug: 'bitbucket' },
     { name: 'Docker', color: '#2496ED', slug: 'docker' },
 
 ];
